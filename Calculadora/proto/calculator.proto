@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package calculator;
+
+// Mensagens para operações
+message Operands {
+    double x = 1;
+    double y = 2;
+}
+
+message Result {
+    double value = 1;
+    string error = 2;
+}
+
+// Serviço Calculator
+service Calculator {
+    rpc Add(Operands) returns (Result);
+    rpc Subtract(Operands) returns (Result);
+    rpc Multiply(Operands) returns (Result);
+    rpc Divide(Operands) returns (Result);
+}
