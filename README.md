@@ -82,6 +82,39 @@ Navegador (Cliente)
 │ Calculadora  │          │  Dashboard       │
 │  GUI         │          │  (Monitoração)   │
 │ :5000        │          │  :6100           │
+
+**Obter o código (via Git)**
+
+Se você preferir puxar o projeto no seu computador, use os comandos abaixo.
+
+- Clonar (HTTPS):
+
+```bash
+git clone https://github.com/caio-3htty/Trabalho-Breno.git
+cd Trabalho-Breno
+```
+
+- Alternativamente, clonar via SSH:
+
+```bash
+git clone git@github.com:caio-3htty/Trabalho-Breno.git
+cd Trabalho-Breno
+```
+
+- Trocar para a branch de desenvolvimento (ex.: `converte-para-python`):
+
+```bash
+git fetch origin
+git checkout converte-para-python
+```
+
+- Atualizar o branch local com as últimas alterações remotas:
+
+```bash
+git pull origin converte-para-python
+```
+
+Esses comandos facilitam puxar/atualizar o código quando estiver em outra máquina.
 └──────┬───────┘          └──────┬───────────┘
        │                         │
        └─────── gRPC ────────────┘
