@@ -2,4 +2,5 @@
 #!/usr/bin/env bash
 set -e
 # pip install -r requirements.txt
-python -m server.server
+export PYTHONPATH=.
+python -m Sevidor.Servidor
