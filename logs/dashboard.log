@@ -1,5 +1,0 @@
-Dashboard do servidor iniciando em http://localhost:6100
- * Serving Flask app 'server_dashboard'
- * Debug mode: off
-Address already in use
-Port 6100 is in use by another program. Either identify and stop that program, or start the server with a different port.
