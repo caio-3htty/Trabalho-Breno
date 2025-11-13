@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+
+# Logs
+logs/
+
+# Operations log (runtime file)
+.operations_log.json
+
+# Virtual env
+venv/
+env/
