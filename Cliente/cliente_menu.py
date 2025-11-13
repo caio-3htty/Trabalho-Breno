@@ -1,6 +1,7 @@
-# filepath: /workspaces/Trabalho-Breno/client/cli_menu.py
-"""
-Interação com o usuário (entrada/saída) — separado da lógica e das chamadas gRPC.
+"""Interação com o usuário (entrada/saída) — separado da lógica e das chamadas gRPC.
+
+Fornece funções para exibir menu, ler operandos e validar entradas do usuário
+para o cliente CLI da calculadora.
 """
 from typing import Tuple, Optional
 

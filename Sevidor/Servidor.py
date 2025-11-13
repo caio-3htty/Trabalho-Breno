@@ -1,7 +1,11 @@
-# filepath: /workspaces/Trabalho-Breno/server/server.py
 """
-Servidor gRPC: inicia o servidor e registra o servicer.
-Uso: python -m server.server
+gRPC server entrypoint for the calculator service.
+
+Este módulo inicia o servidor gRPC, registra o servicer que implementa
+as operações da calculadora e faz o gerenciamento básico de sinais
+(SIGINT/SIGTERM) para desligamento limpo.
+
+Uso: `python -m Sevidor.Servidor` ou importando a função `serve`.
 """
 import logging
 import signal
@@ -11,15 +15,15 @@ from concurrent import futures
 import grpc
 
 import calc_pb2_grpc
-from .service_impl import CalculatorServicerImpl
+from .service_impl import ServicoCalculadoraImpl
 
-def serve(host: str = '[::]', port: int = 50051):
+def serve(host: str = '[::]', port: int = 50052):
     """
     Inicia o servidor gRPC na interface/porta informada.
     """
     logging.basicConfig(level=logging.INFO)
     servidor = grpc.server(futures.ThreadPoolExecutor(max_workers=10))
-    calc_pb2_grpc.add_CalculatorServicer_to_server(CalculatorServicerImpl(), servidor)
+    calc_pb2_grpc.add_CalculatorServicer_to_server(ServicoCalculadoraImpl(), servidor)
     endereco = f"{host}:{port}"
     servidor.add_insecure_port(endereco)
     logging.info("Iniciando servidor gRPC na porta %s", endereco)

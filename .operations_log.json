@@ -1,0 +1,37 @@
+[
+  {
+    "timestamp": "17:38:06",
+    "operation": "2.0 + 3.0",
+    "result": "Resultado: 5.0",
+    "status": "success",
+    "client": "ipv6:%5B::1%5D:42030"
+  },
+  {
+    "timestamp": "17:38:14",
+    "operation": "10.0 − 4.0",
+    "result": "Resultado: 6.0",
+    "status": "success",
+    "client": "ipv6:%5B::1%5D:48144"
+  },
+  {
+    "timestamp": "17:38:21",
+    "operation": "6.0 × 7.0",
+    "result": "Resultado: 42.0",
+    "status": "success",
+    "client": "ipv6:%5B::1%5D:48164"
+  },
+  {
+    "timestamp": "17:53:34",
+    "operation": "11.0 + 22.0",
+    "result": "Resultado: 33.0",
+    "status": "success",
+    "client": "ipv6:%5B::1%5D:60496"
+  },
+  {
+    "timestamp": "17:53:34",
+    "operation": "33.0 + 44.0",
+    "result": "Resultado: 77.0",
+    "status": "success",
+    "client": "ipv6:%5B::1%5D:60498"
+  }
+]

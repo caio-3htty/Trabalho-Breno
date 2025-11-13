@@ -1,5 +1,0 @@
-# filepath: /workspaces/Trabalho-Breno/requirements.txt
-grpcio
-grpcio-tools
-protobuf
-pytest

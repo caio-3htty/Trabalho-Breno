@@ -1,15 +1,15 @@
-# filepath: /workspaces/Trabalho-Breno/client/client.py
 """
 Cliente gRPC que apresenta menu e chama o servidor.
-Uso: python client/client.py --server localhost:50051
+
+Uso: python Cliente/cliente.py --server localhost:50051
 """
 import argparse
 import logging
 
 import grpc
 
-import calc_pb2
-import calc_pb2_grpc
+from Calculadora import calc_pb2
+from Calculadora import calc_pb2_grpc
 
 from . import cli_menu
 from common.helpers import pretty_result, format_server_address
@@ -20,7 +20,7 @@ def run_client(server_address: str):
     :param server_address: endereco do servidor (ex.: localhost:50051)
     """
     logging.basicConfig(level=logging.INFO)
-    endereco = server_address if ':' in server_address else format_server_address(server_address, "50051")
+    endereco = server_address if ':' in server_address else format_server_address(server_address, "50052")
     with grpc.insecure_channel(endereco) as canal:
         stub = calc_pb2_grpc.CalculatorStub(canal)
         while True:
@@ -49,6 +49,6 @@ def run_client(server_address: str):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--server", default="localhost:50051", help="endereço do servidor")
+    parser.add_argument("--server", default="localhost:50052", help="endereço do servidor")
     args = parser.parse_args()
     run_client(args.server)
